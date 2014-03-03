@@ -1,0 +1,97 @@
+/* Gravity Forms */
+.gf_left_third,
+.gf_middle_third,
+.gf_right_third {
+
+	width:100%;
+	margin-bottom:em(15);
+	@include bp('tablet') {	
+		float:left;
+		width:30%;
+		margin-right:5%;
+	}
+}
+.gf_right_third {
+	margin-right:0;
+}
+
+body .gform_wrapper {
+	width:100%;
+	display:inline-block;
+	margin:0;
+	p {
+		width:100%;
+		display:inline-block;
+		margin-top:em(50);
+		margin-bottom:em(36);
+	}
+}
+body .gform_wrapper .gform_body {}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_label {
+	font-size:em(12);
+	display:block;
+}
+body .gform_wrapper .gform_body .gform_fields {}
+body .gform_wrapper .gform_body .gform_fields .gfield input[type=text] {
+	border:none;
+	width:96%;
+	height:auto;
+	color:$textcol;
+	padding:em(3) 2%;
+	font-size:em(12);
+	border:1px solid #ddd;
+	background:#fff;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield textarea {
+	width:96%;
+	height:52px;
+	border:none;
+	color:$textcol;
+	padding:em(3) 2%;
+	font-size:em(12);
+	border:1px solid #ddd;
+	background:#fff;
+}
+body .gform_wrapper .gform_footer input[type=submit] {
+	float:right;
+	border:none;
+	background:none;
+}
+
+/* captcha */
+.captcha {
+	display:block;
+	margin-top:em(10);
+	li {
+		display:inline;
+		a {
+			display:inline-block;
+			height:46px;
+			margin-right:67px;
+			&.cap1 {
+				width:48px;
+				background:url(#{$assetPath}/captcha1.png) no-repeat center left;	
+			}
+			&.cap2 {
+				width:41px;
+				background:url(#{$assetPath}/captcha2.png) no-repeat center left;	
+			}
+			&.cap3 {
+				width:49px;
+				background:url(#{$assetPath}/captcha3.png) no-repeat center left;	
+			}
+			&.cap4 {
+				width:46px;
+				background:url(#{$assetPath}/captcha4.png) no-repeat center left;	
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
