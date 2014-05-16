@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <section id="main" role="main">
 	<div id="panel">
     	
@@ -26,7 +25,7 @@
 				$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'largethumb' );
 			endif; 
 		?>
-        <a href="#" class="item <?php echo $class; ?>" id="click-me" title="tile" rel="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]?>"  class="draggable" /></a>
+        <a href="#" class="item <?php echo $class; ?> click-me" title="tile" rel="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0]?>"  class="draggable" /></a>
         <?php }  ?>
     </div> 
 </section>

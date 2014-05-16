@@ -100,7 +100,7 @@ function feature_init()
 	);
 	
 	$args['labels'] 				= $labels;
-	$args['supports'] 		  	= array('title','editor','thumbnail');
+	$args['supports'] 		  	= array('title','thumbnail');
 	$args['rewrite']		   		= array('slug' => 'work');
 	$args['menu_icon']		 	= get_bloginfo('template_directory').'/assets/images/work.png';
 	$args['show_in_menu']	= true;

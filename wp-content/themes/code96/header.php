@@ -76,14 +76,22 @@
             
             <div class="overlay-container">
                 <div class="window-container zoomin">
-                	<span class="close">X</span>
-                    <h3>say hello</h3> 
+                	<a href="#" class="close" >X</a>
+                    <?php
+						$my_id = 83;
+						$post_id_83 = get_post($my_id);
+						$content = $post_id_83->post_content;
+						$content = apply_filters('the_content', $content);
+						$content = str_replace(']]>', ']]>', $content);
+					?>
+                	<p><?php echo $content; ?></p>
+					<br>
                     <div class="form-container">
 						<?php gravity_form(1, false, false, false, '', true, 12); ?>
                     </div>
                     <div class="footer">
                     	<h3><?php the_field('title_for_footer_box', $homepageid); ?></h3>
-                        <p><?php the_field('conent_for_footer_box', $homepageid); ?></p>
+                        <?php the_field('conent_for_footer_box', $homepageid); ?>
                     	<ul>
                             <li>over the phone<span><?php the_field('telephone_number', $homepageid); ?></span></li>
                             <li>by electronic pigeon <span><a href="mailto:<?php the_field('contact_modal_window_email', $homepageid); ?>"><?php the_field('contact_modal_window_email', $homepageid); ?></a></span></li>

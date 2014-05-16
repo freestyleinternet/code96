@@ -10,7 +10,8 @@
                     $homepageid = 22;
 			?>
              <div class="wrapper">
-                <h3>say hello</h3> 
+                <h3><?php the_title(); ?></h3> 
+                <?php the_content(); ?>
                 <div class="form-container">
                     <?php gravity_form(1, false, false, false, '', true, 12); ?>
                 </div>

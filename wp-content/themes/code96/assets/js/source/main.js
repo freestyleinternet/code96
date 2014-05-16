@@ -54,7 +54,7 @@
 	
 
 	// Portfolio wall click to show panel
-	$('#click-me, .close').click(function() {
+	$('.click-me').on('click',function() {
 		
 			
 			$.ajaxSetup({cache:false});
@@ -78,9 +78,32 @@
 		}
 	});
 	
-	$('.close').click(function() {
-		$('#panel').css('height','0');
+	
+	$(document).on('click', '.close', function(event) {
+
+		event.preventDefault();
+
+		var height = $("#panel").height();
+		console.log('wysokosc penelu z close: ' + height);
+		if( height > 0 ) {
+			$('#panel').css('height','0');
+		}
 	});
+	
+	$(document).on('click', '#images-view a', function(event) {
+
+		event.preventDefault();
+
+		var href = jQuery(this).data('href');
+
+		jQuery("#imageBox").fadeOut(400, function(){
+		    jQuery(this).html('<img src="' + href + '">');
+		}).fadeIn(400);
+
+
+	});
+
+
 
 	
 	// Modal contact window
