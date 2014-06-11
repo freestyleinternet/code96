@@ -108,7 +108,7 @@ article {
 	overflow: hidden;
 	position: relative;
 	@include bp('tablet') {
-		width:16.66666666666667%; /*  320 / 1280 */
+		width:25%; /*  320 / 1280 */
 	}
 	img {
 		display:block;

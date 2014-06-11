@@ -54,7 +54,7 @@
                     <li><a class="facebook" href="<?php the_field('facebook_page_url', $homepageid); ?>" target="_blank"></a></li>
                     <li><a class="twitter" href="<?php the_field('twitter_handle', $homepageid); ?>" target="_blank"></a></li>
                     <li><a class="google" href="<?php the_field('google+_link', $homepageid); ?>" target="_blank"></a></li>
-                    <li><a class="youtube" href="<?php the_field('youtube_channel', $homepageid); ?>" target="_blank"></a></li>
+                    <!--<li><a class="youtube" href="<?php the_field('youtube_channel', $homepageid); ?>" target="_blank"></a></li>-->
             	</ul>
             </div>
         </div>
@@ -70,7 +70,6 @@
                                 'items_wrap' => '%3$s'
                             ));
                         ?>
-                        <li><a type="button" value="Zoom In Modal Window" class="button" data-type="zoomin">say hello</a></li>
 				</ul>
             </nav>
             
@@ -104,7 +103,7 @@
             
             <div class="cycle-slideshow" 
                 data-cycle-fx="scrollHorz" 
-                data-cycle-timeout="2000"
+                data-cycle-timeout="<?php the_field('slideshow_speed', $homepageid); ?>"
                 data-cycle-swipe="true"
                 data-cycle-slides="> div.slide"
                 data-cycle-prev=".prevControl"
@@ -123,7 +122,7 @@
             	<li><a class="facebook" href="<?php the_field('facebook_page_url', $homepageid); ?>" target="_blank"></a></li>
                 <li><a class="twitter" href="<?php the_field('twitter_handle', $homepageid); ?>" target="_blank"></a></li>
                 <li><a class="google" href="<?php the_field('google+_link', $homepageid); ?>" target="_blank"></a></li>
-                <li><a class="youtube" href="<?php the_field('youtube_channel', $homepageid); ?>" target="_blank"></a></li>
+                <!--<li><a class="youtube" href="<?php the_field('youtube_channel', $homepageid); ?>" target="_blank"></a></li>-->
             </ul>
         </div>
 	</header>

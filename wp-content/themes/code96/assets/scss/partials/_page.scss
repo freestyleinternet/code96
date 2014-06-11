@@ -56,9 +56,6 @@ img {
 	width:100%;
 	display:inline-block;
 	background:#fff;
-	.wrapper {
-		width:100%;
-	}
 }
 header {
 	float:left;
@@ -77,7 +74,7 @@ header {
 	height:40px;
 	display:block;
 	margin:em(7) auto 0 auto;
-	background:url(#{$assetPath}/code96-logo.png) no-repeat top left;
+	background:url(#{$assetPath}/code96-logo.svg) no-repeat top left;
 	@include bp('tablet') {
 		float:left;
 	}
@@ -287,7 +284,7 @@ nav ul {
 		li a {
 			display:block;
 			width:64px;
-			height:64px;
+			height:85px; /* 64 with youtube */
 			background:$navigation;
 			border-left:1px solid $navigation;
 			&.facebook {
@@ -374,6 +371,9 @@ nav ul {
 		line-height:18px;
 		margin-bottom:em(24);
 	}
+	&.margin--bottom {
+		margin-bottom:em(40);
+	}
 }
 
 @include bp('tablet') {
@@ -395,10 +395,14 @@ nav ul {
 	margin-bottom:em(37);
 	@include bp('tablet') {
 		width:33.33333333333333%;  /*  320 / 960 */
-		min-height:400px;
+		min-height:500px;
 	}
 	@include bp('biggie') {
-		min-height:423px;
+		min-height:480px;
+	}
+	img {
+
+		margin-bottom:em(10);
 	}
 	p {
 		width:93%;
@@ -407,6 +411,7 @@ nav ul {
 		padding:0;
 		@include bp('tablet') {
 			width:84.375%;
+			margin-left:0;
 		}
 	}
 	a {
@@ -422,6 +427,16 @@ nav ul {
 	padding-bottom:0;
 	p {
 		margin-left:0;
+	}
+	a {
+		position:relative;
+		width:auto;
+		color:#000;
+		font-size:12px;
+		text-decoration:underline;
+		&:hover {
+			text-decoration:none;
+		}
 	}
 }
 
@@ -445,7 +460,7 @@ nav ul {
 	
 	&:hover {
 		transform: scale(4);
-    	transition: all 3s ease-in-out 0.5s;
+    	transition: all 1s ease-in-out 0.5s;
 	}
 }
 	.small {
@@ -502,11 +517,11 @@ nav ul {
 
 	
 .isotope, .isotope .isotope-item {
-	-webkit-transition-duration: 0.8s;
-	-moz-transition-duration: 0.8s;
-	-ms-transition-duration: 0.8s;
-	-o-transition-duration: 0.8s;
-	transition-duration: 0.8s;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-ms-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
 }
 .isotope {
 	-webkit-transition-property: height, width;

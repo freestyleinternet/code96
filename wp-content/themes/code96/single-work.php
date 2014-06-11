@@ -24,7 +24,7 @@
                         <li><strong>Share</strong></li>
                         <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>">like</a></li>
                         <li><a href="https://twitter.com/intent/tweet?text=<?php the_title(); ?> <?php the_permalink(); ?>&url=YOUR-URL&via=TEFLAcademyUK">tweet</a></li>
-                        <li><a href="#">email</a></li>
+                        <!--<li><a href="#">email</a></li>-->
                     </ul>
                 </div>
             </div>

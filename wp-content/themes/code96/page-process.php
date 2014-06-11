@@ -13,8 +13,9 @@
                 <?php if(get_field('download')): ?>
 					<?php while(the_repeater_field('download')): ?>
                         <article class="process">
-                            <img src="<?php the_sub_field('featured_image'); ?>"   alt="Meet the locals"/>
-                            <p><?php the_sub_field('description'); ?></p>
+                            <?php if( get_sub_field('featured_image') ): ?><img src="<?php the_sub_field('featured_image'); ?>"   alt="Meet the locals"/><?php endif; ?>
+                            <?php the_sub_field('title'); ?>
+							   <?php the_sub_field('description'); ?>
                             <?php
 								$prop_det_url = get_sub_field('file_to_download');
 									if($prop_det_url!=''){ 
